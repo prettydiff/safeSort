@@ -23,7 +23,7 @@ safeSort provides a sorting method that sorts by value and type and does so in f
 Limitations Compared to Native sort
 -----------------------------------
 
-Despite being more programmatically more efficient and more predictable safeSort is roughly twice as slow as the native sort method. This could be due to the native sort method having the advantage of compiled native code. safeSort uses an array as a recursive intermediary that may also account for its slowness.
+Despite being more programmatically more efficient and more predictable safeSort is roughly twice as slow as the native sort method. This could be due to the native sort method having the advantage of compiled native code. safeSort uses an array as a recursive intermediary that may also account for its slowness.  [JSPerf/safeSort](https://jsperf.com/safesort)
 
 Using a comparator function in the native sort method it is possible to completely customize how a multidimensional array sorts relative to the comparison of selective child array indexes. safeSort does not have this capability at this time, but may be expanded to support custom definitions at a later time.
 
