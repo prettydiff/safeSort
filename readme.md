@@ -32,10 +32,10 @@ The Algorithm
 
 safeSort uses an algorithm defined by the following steps:
 
-1) Walk the entire array search for the ideal key (lowest value and type for ascending or largest for descending).
-2) Using an intermediary array note which indexes contain the key.
-3) Keep aware of the number of indexes in the intermediary array. I will call this length variable "c".
-4) Swap values of the first "c" number of indexes with those contained in the intermediary array.
-5) Recursively repeat the first 4 steps until "c" is the length of the array, but starting at index "c" instead of index 0 at each recursive pass.
+1. Walk the entire array search for the ideal key (lowest value and type for ascending or largest for descending).
+2. Using an intermediary array note which indexes contain the key.
+3. Keep aware of the number of indexes in the intermediary array. I will call this length variable "c".
+4. Swap values of the first "c" number of indexes with those contained in the intermediary array.
+5. Recursively repeat the first 4 steps until "c" is the length of the array, but starting at index "c" instead of index 0 at each recursive pass.
 
 Enjoy and please visit http://prettydiff.com/
