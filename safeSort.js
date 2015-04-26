@@ -3,7 +3,7 @@
 
 Just a simple array sort scheme. The provided sorting accounts for values and types.
 
-It only takes two parameters:
+It only takes three parameters:
 
 * array - an actual array to pass in
 * operation - what kind of sort do you want?  Three modes supported:
@@ -21,11 +21,11 @@ How the algorithm works:
 
 1) Walk the entire array looking the lowest value and lowest type and count the
    instances.
-2) Note which index(es) in the array contain this lowest value, x indexes
-3) Swap the values of the first x indexes with the low indexes
-4) Keep aware of the length of low values in a closure... variable c
-5) Do it all over again with one exception:
-      * Start walking the array from index c
+2) Use a temporary array to note which index(es) of the original array contain this lowest value
+3) Keep aware of the length of low values in a closure... variable c
+4) Swap the values of the first c indexes with those in the temporary array.
+5) Do it all over again until c is the length of the array with one exception:
+      * Start walking the array from index c at each recursive pass.
 
 Enjoy and visit http://prettydiff.com/
 
@@ -69,7 +69,7 @@ var safeSort = function (array, operation, recursive) {
                         recurse(storea[0]);
                     } else {
                         if (recursive === true) {
-                            item = child();
+                            child();
                         }
                         item = storeb;
                     }
@@ -116,7 +116,7 @@ var safeSort = function (array, operation, recursive) {
                         recurse();
                     } else {
                         if (recursive === true) {
-                            item = child();
+                            child();
                         }
                         item = storeb;
                     }
